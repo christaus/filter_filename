@@ -1,51 +1,8 @@
 # Filename filters for Python
 
-import os
-
-
-def extension(filename):
-    """Return the extension of a filename
-
-    Keyword arguments:
-    filename -- the original filename
-    """
-    # Check if a .something exist in the actual filename
-    if filename.rfind(".") == -1:
-        return ""
-    extension = filename[filename.rfind("."):]
-    return extension
-
-
-def remove_directory_path(filename):
-    """Remove the directory path from a path
-    Return the filename
-
-    Keyword arguments:
-    filename -- the original filename / path
-    """
-    # Check the last os separator in the actual filename
-    if filename.rfind(os.sep) == -1:
-        return filename
-    filename = filename[filename.rfind(os.sep):]
-    return filename
-
-
-def strip_filename(filename):
-    """Strip illegal characters in Windows 10 filenames.
-
-    Keyword arguments:
-    filename -- the original filename
-    """
-    # French version, may vary according to local...
-    allowed_characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789. ()[]-éèàçï_"
-    filename = filename.strip()
-    allowed_filename = ""
-    for letter in filename:
-        for allowed_letter in allowed_characters:
-            if letter == allowed_letter:
-                allowed_filename = allowed_filename + letter
-                continue
-    return allowed_filename
+from extension import extension
+from remove_directory_path import remove_directory_path
+from strip_filename import strip_filename
 
 
 def filter_filename(filename):
