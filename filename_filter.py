@@ -10,8 +10,6 @@ def filter_filename(filename):
     Limits length of filename in Windows 10 filenames.
     Return an allowed filename.
 
-    !!! Be careful to extract the directory path before !!!
-
     Keyword arguments:
     filename -- the original filename
     """
