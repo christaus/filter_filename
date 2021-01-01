@@ -2,6 +2,7 @@
 
 import os
 
+
 def extension(filename):
     """Return the extension of a filename
 
@@ -13,6 +14,7 @@ def extension(filename):
         return ""
     extension = filename[filename.rfind("."):]
     return extension
+
 
 def remove_directory_path(filename):
     """Remove the directory path from a path
