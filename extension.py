@@ -7,5 +7,5 @@ def extension(filename):
     # Check if a .something exist in the actual filename
     if filename.rfind(".") == -1:
         return ""
-    extension = filename[filename.rfind("."):]
-    return extension
+    file_extension = filename[filename.rfind("."):]
+    return file_extension
