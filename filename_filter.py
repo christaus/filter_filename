@@ -23,7 +23,8 @@ def filter_filename(filename):
     if len(extension(filename)) > 249:
         return filename[:250]
 
-    # Else, we keep the extension if the filename length is above 250 characters long.
+    # Else, we keep the extension if the filename length is above
+    # 250 characters long.
     if len(filename) > 250:
         return filename[:250 - len(extension(filename))] + extension(filename)
     return filename
