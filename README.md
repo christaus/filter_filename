@@ -1,6 +1,6 @@
 # filter_filename
 
-Filter filename to make them valid for windows 10
+Filter filenames to make them valid for windows 10
 
 ## Usage:
 
