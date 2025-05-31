@@ -6,7 +6,7 @@ def strip_filename(filename):
     """
     # French version, may vary according to local...
     allowed_characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    "0123456789. ()[]-êéèàçï_"
+    "0123456789. ()[]-ôêéèàçï_"
     filename = filename.strip()
     allowed_filename = ""
     for letter in filename:
